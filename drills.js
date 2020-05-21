@@ -54,3 +54,32 @@ value at its index is called the result is NaN.  The _resize
 function exists to increase the allocated memory should the
 array grow beyond its initial limits.
 */
+
+//5. URLify a string
+function URLify(str) {
+  const URL = str.split(' ').join('%20');
+  return URL;
+}
+//console.log(URLify('www.thinkful.com /tauh ida parv een'));
+
+//6. Filtering an array
+function filterArry(arry, filter) {
+  let result = [];
+  for(let i = 0; i < arry.length; i++) {
+    if(arry[i] >= filter) result.push(arry[i]);
+  }
+  return result;
+}
+//let testArry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//console.log(filterArry(testArry, 5));
+
+//6. Max sum in the array
+function maxSum(arry) {
+  let result = 0;
+  for(let i = 0; i < arry.length; i++) {
+    result = result + arry[i];    
+  }
+  return result;
+}
+//let testArry = [4, 6, -3, 5, -2, 1];
+//console.log(maxSum(testArry));
