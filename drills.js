@@ -146,4 +146,18 @@ function twoDArry(arry) {
 //];
 //console.log(twoDArry(testArry));
 
-//12. Strong rotation
+//12. String rotation
+function rotateString(str1, str2) {
+  for (let i = 0; i < str2.length; i++) {
+    str2 = str2.slice(1) + str2[0];
+    if (str1 === str2) {
+      return true;
+    } 
+  }
+  return false;
+}
+let testStr1 = 'amazon';
+let testStr2 = 'azonma';
+let testStr3 = 'azonam';
+console.log(rotateString(testStr1, testStr2));
+console.log(rotateString(testStr1, testStr3));
